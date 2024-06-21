@@ -1,0 +1,44 @@
+import UIKit
+import GameplayKit
+
+class GameOverViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.navigationController?.isNavigationBarHidden = true
+
+        if let scene = GKScene(fileNamed: "GameOverScene") {
+            
+            if let sceneNode = scene.rootNode as! GameScene? {
+                sceneNode.scaleMode = .aspectFill
+
+                if let view = self.view as! SKView? {
+                    view.presentScene(sceneNode)
+                    view.ignoresSiblingOrder = true
+                    view.showsFPS = true
+                    view.showsNodeCount = true
+                }
+            }
+        }
+    }
+
+    override var shouldAutorotate: Bool {
+        return true
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .allButUpsideDown
+        }
+        else {
+            return .all
+        }
+    }
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
+}

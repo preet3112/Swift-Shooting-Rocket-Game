@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6XR-Uk-Da5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="dFl-0J-vC8">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="mpQ-JC-3ev" customClass="ViewController" customModule="Game_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wCU-Oe-IzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-9g-3Zd">
+                                <rect key="frame" x="69" y="203" width="276" height="189"/>
+                                <subviews>
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTK-D4-8YT">
+                                        <rect key="frame" x="0.0" y="0.0" width="276" height="34"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UdF-5r-DRX">
+                                        <rect key="frame" x="0.0" y="49" width="276" height="34"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxR-Oo-MBI">
+                                        <rect key="frame" x="112" y="98" width="52" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login_btn:" destination="mpQ-JC-3ev" eventType="touchUpInside" id="bcv-D8-ISu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iei-Gv-jau">
+                                        <rect key="frame" x="107.5" y="154" width="61" height="35"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="CreateAccountButtonAction:" destination="mpQ-JC-3ev" eventType="touchUpInside" id="mSu-vL-VeO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xTK-D4-8YT" firstAttribute="width" secondItem="eqp-9g-3Zd" secondAttribute="width" multiplier="1:1" id="4Wb-9w-E6C"/>
+                                    <constraint firstItem="UdF-5r-DRX" firstAttribute="width" secondItem="eqp-9g-3Zd" secondAttribute="width" multiplier="1:1" id="hdv-cQ-syI"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="8tq-vz-zTk">
+                                <rect key="frame" x="0.0" y="67" width="414" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D01-UX-b1j"/>
+                        <color key="backgroundColor" red="0.0" green="0.4107812643" blue="0.64374953509999999" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="8tq-vz-zTk" firstAttribute="width" secondItem="wCU-Oe-IzJ" secondAttribute="width" multiplier="1:1" id="2um-Ha-hvF"/>
+                            <constraint firstItem="eqp-9g-3Zd" firstAttribute="top" secondItem="8tq-vz-zTk" secondAttribute="bottom" constant="8" id="KT0-6M-jr2"/>
+                            <constraint firstItem="8tq-vz-zTk" firstAttribute="centerX" secondItem="eqp-9g-3Zd" secondAttribute="centerX" id="fUc-wY-kmU"/>
+                            <constraint firstItem="eqp-9g-3Zd" firstAttribute="top" secondItem="D01-UX-b1j" secondAttribute="top" constant="159" id="kT6-cx-cxp"/>
+                            <constraint firstItem="eqp-9g-3Zd" firstAttribute="width" secondItem="wCU-Oe-IzJ" secondAttribute="width" multiplier="6:9" id="qAm-DE-aKU"/>
+                            <constraint firstItem="8tq-vz-zTk" firstAttribute="top" secondItem="D01-UX-b1j" secondAttribute="top" constant="23" id="uyv-fi-25i"/>
+                            <constraint firstItem="eqp-9g-3Zd" firstAttribute="centerX" secondItem="wCU-Oe-IzJ" secondAttribute="centerX" id="wxN-JK-hvP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TfF-L6-QUu"/>
+                    <connections>
+                        <outlet property="Password" destination="UdF-5r-DRX" id="Q1i-XH-oJ9"/>
+                        <outlet property="Uid" destination="xTK-D4-8YT" id="UnH-jy-BEU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GfI-fH-bMq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234.78260869565219" y="75"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BV1-FR-VrT" customClass="GameViewController" customModule="Game_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="L7k-7s-z5D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032" y="75"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="Ios-NZ-DMa">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="J0R-oV-yKX" customClass="GameOverViewController" customModule="Game_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="udg-3g-ija">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qVE-zQ-Ygo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5B-Ju-sRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1768" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zBS-f4-gnd">
+            <objects>
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="6XR-Uk-Da5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFill" barStyle="blackTranslucent" id="VYL-Dx-tAk">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mpQ-JC-3ev" kind="relationship" relationship="rootViewController" id="YOR-O3-9wS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BFY-CP-Dh8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-565" y="75"/>
+        </scene>
+        <!--Create Account View Controller-->
+        <scene sceneID="ywg-si-VTg">
+            <objects>
+                <viewController storyboardIdentifier="CreateViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DPT-er-7Kv" customClass="CreateAccountViewController" customModule="Game_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VFc-eB-mwd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kg1-8s-iwp">
+                                <rect key="frame" x="69" y="203" width="276" height="183"/>
+                                <subviews>
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fHf-Tu-ZNi">
+                                        <rect key="frame" x="0.0" y="0.0" width="276" height="34"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
+                                    </textField>
+                                    <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MG2-zM-9sx">
+                                        <rect key="frame" x="0.0" y="49" width="276" height="34"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZZ-VF-6be">
+                                        <rect key="frame" x="65" y="98" width="146" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                        <state key="normal" title="Create account">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="CreateButtonAction:" destination="DPT-er-7Kv" eventType="touchUpInside" id="E9Y-wA-7Ec"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAe-Fk-SF5">
+                                        <rect key="frame" x="119.5" y="154" width="37" height="29"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                        <state key="normal" title="&lt; Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButton:" destination="DPT-er-7Kv" eventType="touchUpInside" id="0p4-ZR-R7Y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MG2-zM-9sx" firstAttribute="width" secondItem="kg1-8s-iwp" secondAttribute="width" multiplier="1:1" id="VFT-my-ugU"/>
+                                    <constraint firstItem="fHf-Tu-ZNi" firstAttribute="width" secondItem="kg1-8s-iwp" secondAttribute="width" multiplier="1:1" id="VP8-0A-PSl"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner2" translatesAutoresizingMaskIntoConstraints="NO" id="198-dW-pGu">
+                                <rect key="frame" x="0.0" y="67" width="414" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fot-uI-YFZ"/>
+                        <color key="backgroundColor" red="0.0" green="0.4107812643" blue="0.64374953509999999" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="198-dW-pGu" firstAttribute="width" secondItem="VFc-eB-mwd" secondAttribute="width" multiplier="1:1" id="5UG-lZ-VkW"/>
+                            <constraint firstItem="kg1-8s-iwp" firstAttribute="top" secondItem="Fot-uI-YFZ" secondAttribute="top" constant="159" id="FK8-gq-THw"/>
+                            <constraint firstItem="kg1-8s-iwp" firstAttribute="width" secondItem="VFc-eB-mwd" secondAttribute="width" multiplier="6:9" id="Gqc-5E-Fdr"/>
+                            <constraint firstItem="kg1-8s-iwp" firstAttribute="centerX" secondItem="VFc-eB-mwd" secondAttribute="centerX" id="NjU-99-Kg9"/>
+                            <constraint firstItem="kg1-8s-iwp" firstAttribute="top" secondItem="198-dW-pGu" secondAttribute="bottom" constant="8" id="S0i-pQ-X4Z"/>
+                            <constraint firstItem="198-dW-pGu" firstAttribute="centerX" secondItem="kg1-8s-iwp" secondAttribute="centerX" id="XE2-wv-dkQ"/>
+                            <constraint firstItem="198-dW-pGu" firstAttribute="top" secondItem="Fot-uI-YFZ" secondAttribute="top" constant="23" id="fzi-Xd-OK8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="s39-Bk-2y8"/>
+                    <connections>
+                        <outlet property="CreateUid" destination="fHf-Tu-ZNi" id="9cS-yc-Ss8"/>
+                        <outlet property="Password" destination="MG2-zM-9sx" id="S5i-kJ-xfK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QDP-4r-eGt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-565" y="802"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="banner" width="1944" height="504"/>
+        <image name="banner2" width="1944" height="504"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
